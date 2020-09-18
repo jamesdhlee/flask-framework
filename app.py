@@ -9,7 +9,7 @@ import jinja2
 from bokeh.embed import server_document, components 
 from bokeh.layouts import column
 from bokeh.models import ColumnDataSource, HoverTool, TextInput, CustomJS
-from bokeh.io import curdoc, output_notebook, output_file
+from bokeh.io import curdoc, output_file
 from bokeh.plotting import figure, output_file, show
 from bokeh.server.server import Server
 from bokeh.themes import Theme
@@ -54,7 +54,7 @@ def graph():
     df1=df.last('31D')
 
     output_file('templates/output.html')
-    output_notebook()
+    #output_notebook()
 
     #define x and y
     x = df1.index
